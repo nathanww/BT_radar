@@ -140,7 +140,7 @@ if (System.currentTimeMillis()> lastSample+200) {
 
     if (intensity > 0) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            long[] timings = {40,60}; // Start immediately (0ms delay), vibrate for 100ms, then off for 500ms
+            long[] timings = {100,100}; // Start immediately (0ms delay), vibrate for 100ms, then off for 500ms
             int[] amplitudes = {intensity,0};
             VibrationEffect effect = VibrationEffect.createWaveform(timings,amplitudes,0);
             vibrator.cancel();
